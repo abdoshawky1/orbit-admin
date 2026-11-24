@@ -28,7 +28,7 @@ An admin dashboard for a small online shop. The owner sees revenue and order tre
 
 ## Tradeoffs and what I would do next
 
-- **The data is fake.** About 700 orders are generated in the browser from a fixed random seed, so the demo looks the same each time. Status changes are saved in localStorage only. A real version needs an API and a database.
+- **The data is fake.** About 1,000 orders are generated in the browser from a fixed random seed, so the demo looks the same each time. Status changes are saved in localStorage only. A real version needs an API and a database.
 - **The login is a demo.** It compares against a hard-coded password in the browser and protects nothing. A real version verifies credentials on a server and uses a session cookie or token, with server-side checks on every request.
 - **No tests for the React components yet.** The logic is tested; UI is checked by hand and with screenshots.
 - **Next:** customers page, product stock, date-range picker, and a real backend.
