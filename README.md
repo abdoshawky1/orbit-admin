@@ -2,7 +2,7 @@
 
 An admin dashboard for a small online shop. The owner sees revenue and order trends at a glance, then finds and updates individual orders.
 
-**Live demo:** _add link after deploy_ · Demo login: `admin@orbit.demo` / `orbit-demo`
+**Live demo:** https://orbit-admin-cyan.vercel.app · Demo login: `admin@orbit.demo` / `orbit-demo`
 
 ![Overview](docs/overview.png)
 ![Orders](docs/orders.png)
