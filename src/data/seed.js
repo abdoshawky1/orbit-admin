@@ -12,7 +12,7 @@ const PRODUCTS = [
 ];
 
 const FIRST = ['Omar', 'Layla', 'Youssef', 'Mona', 'Karim', 'Nour', 'Hassan', 'Salma', 'Tarek', 'Dina', 'Ali', 'Rania', 'Ziad', 'Hana', 'Mostafa', 'Farida'];
-const LAST = ['Hassan', 'Ibrahim', 'Mansour', 'Saad', 'Fahmy', 'Nabil', 'Adel', 'Samir', 'Khalil', 'Farouk'];
+const LAST = ['Hassan', 'Ibrahim', 'Mansour', 'Saad', 'Fahmy', 'Nabil', 'Adel', 'Samir', 'Khalil', 'Farouk', 'Zaki', 'Rashad', 'Fouad', 'Gaber', 'Helal', 'Kamal', 'Lotfy', 'Maged', 'Naguib', 'Osman', 'Ragab', 'Sabry', 'Tawfik', 'Wahba'];
 
 // Small seeded random generator so the demo data is the same on every load.
 function mulberry32(seed) {
@@ -36,7 +36,7 @@ function pickStatus(rand, ageDays) {
 
 export function generateOrders(todayISO, days = 120, seed = 7) {
   const rand = mulberry32(seed);
-  const customers = Array.from({ length: 40 }, (_, i) => {
+  const customers = Array.from({ length: 400 }, (_, i) => {
     const first = FIRST[Math.floor(rand() * FIRST.length)];
     const last = LAST[Math.floor(rand() * LAST.length)];
     return { name: `${first} ${last}`, email: `${first}.${last}${i}@example.com`.toLowerCase() };

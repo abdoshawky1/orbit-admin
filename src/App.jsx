@@ -5,6 +5,7 @@ import Layout from './components/Layout.jsx';
 import Login from './pages/Login.jsx';
 import Overview from './pages/Overview.jsx';
 import Orders from './pages/Orders.jsx';
+import Customers from './pages/Customers.jsx';
 
 function Protected({ children }) {
   const { signedIn } = useAuth();
@@ -20,6 +21,7 @@ export default function App() {
           <Route element={<Protected><Layout /></Protected>}>
             <Route index element={<Overview />} />
             <Route path="orders" element={<Orders />} />
+            <Route path="customers" element={<Customers />} />
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

@@ -5,6 +5,16 @@ function cell(value) {
   return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 }
 
+export function customersToCSV(customers) {
+  const header = ['Customer', 'Email', 'Orders', 'Cancelled', 'Spent (USD)', 'Average order (USD)', 'First order', 'Last order'];
+  const lines = customers.map((c) =>
+    [c.name, c.email, c.orders, c.cancelled, c.spent.toFixed(2), c.avgOrder.toFixed(2), c.firstOrder, c.lastOrder]
+      .map(cell)
+      .join(',')
+  );
+  return [header.join(','), ...lines].join('\n');
+}
+
 export function ordersToCSV(orders) {
   const header = ['Order', 'Date', 'Customer', 'Email', 'Items', 'Total (USD)', 'Status'];
   const lines = orders.map((o) =>

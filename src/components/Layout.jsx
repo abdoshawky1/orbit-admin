@@ -11,6 +11,7 @@ export default function Layout() {
         <nav>
           <NavLink to="/" end>Overview</NavLink>
           <NavLink to="/orders">Orders</NavLink>
+          <NavLink to="/customers">Customers</NavLink>
         </nav>
         <button className="btn btn-ghost" onClick={() => { logout(); navigate('/login'); }}>Sign out</button>
       </aside>
